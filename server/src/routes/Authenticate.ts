@@ -10,7 +10,7 @@ export interface JwtDecodedRequest extends Request {
 
 @Injectable()
 export default class Authenticate {
-	constructor(@Inject(JwtSecret) private jwtSecret: string) {}
+	constructor() {}
 	
 	@autobind
 	async auth(req: Request, res: Response) {
