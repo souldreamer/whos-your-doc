@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"typeRoots": ["node_modules/@types"],
+		"experimentalDecorators": true,
+		"alwaysStrict": true,
+		"emitDecoratorMetadata": true,
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noImplicitReturns": true,
+		"pretty": true,
+		"strictNullChecks": true,
+		"target": "es2016"
+	}
+}
