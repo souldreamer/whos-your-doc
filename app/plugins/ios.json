@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.newhaircut.whos_your_doc"
+        }
+    },
+    "dependent_plugins": {}
+}
