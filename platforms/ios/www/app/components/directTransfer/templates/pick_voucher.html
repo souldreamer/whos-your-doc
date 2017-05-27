@@ -1,0 +1,37 @@
+<ion-view view-title="VOUCHER CODE" hide-back-button="true">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear button-assertive uppercase header-button back-button" ng-click="back()"><img
+      class="back-arrow" src="img/back-arrow.png">back
+    </button>
+  </ion-nav-buttons>
+  <!--<ion-nav-buttons side="right">-->
+    <!--<button ng-click="cancel()"-->
+            <!--class="button button-clear button-assertive uppercase header-button cancel button-custom-outline">cancel-->
+    <!--</button>-->
+  <!--</ion-nav-buttons>-->
+
+  <ion-content class="pick-voucher long-background" scroll="false">
+
+    <form name="validateVoucher" autocomplete="off" novalidate>
+
+          <div class="pick-label item item-input">
+            <i class="ion ion-ios-pricetag" ng-class="{'i-active': selected}"></i>
+            <!--placeholder="CL_54B5FB"-->
+            <input ng-pattern="/^([A-Za-z]{0,2})[_]([a-zA-Z\d]{6})$/" name="voucher_code" class="search-input ellipsis2-on" type="text"
+                   ng-model="transfer.voucher_code" ng-focus="selected=1;" ng-blur="selected=0">
+            <button ng-click="reset()" class="button-reset" ng-show="transfer.voucher_code.length" type="reset"><i
+              class="ion ion-ios-close"></i></button>
+          </div>
+
+          <p ng-cloak class="help-block"
+             ng-show="validateVoucher.voucher_code.$error.pattern">You voucher is invalid.
+          </p>
+          <p ng-cloak ng-show="server_error" ng-hide="!transfer.voucher_code" class="help-block">{{server_error}}</p>
+          <div class="button-wrapper">
+            <button class="button red-button activated continue-button uppercase" ng-click="applyVoucher()" ng-disabled="!transfer.voucher_code.length ">apply voucher</button>
+          </div>
+    </form>
+
+  </ion-content>
+
+</ion-view>

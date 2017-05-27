@@ -1,0 +1,81 @@
+label {
+    background-color: $label-background !important;
+    margin: 10px auto!important;
+    border: 2px solid transparent !important;
+    transition: all 0.2s ease-in;
+    height: 53px;
+    max-width: 350px;
+    width: 100%;
+
+    .input-label {
+        color: $light;
+    }
+    span.input-label {
+        font-family: latolight;
+        font-size: 13px;
+        font-style: normal;
+        font-variant:normal;
+        font-weight: 100;
+        text-align: right;
+        padding-right: 20px;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=tel],
+    input[type=password],
+    input[type=number] {
+        color: $light;
+        padding: 10px 0 10px 0;
+        font-size: 12px;
+    }
+    ::-webkit-input-placeholder {
+        color: $placeholder;
+        font-family: latoregular;
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: left;
+    }
+    .checkbox-square .checkbox-icon:before, .checkbox-square input:before, .platform-android .checkbox-platform .checkbox-icon:before, .platform-android .checkbox-platform input:before {
+        background-color: $label-background;
+        border-color: transparent;
+    }
+  .checkbox .checkbox-icon:before, .checkbox input:before {
+    background-color: $label-background;
+    border-color: transparent;
+    border-radius: 2px;
+  }
+    .checkbox input:checked+.checkbox-icon:before, .checkbox input:checked:before {
+        background-color: $label-background;
+        border-color: transparent;
+
+    }
+    &.dropdown-display {
+        span.input-label {
+            padding-top: 9px;
+        }
+        .checkbox-icon:after  {
+            border-color: $button-red;
+        }
+    }
+}
+
+.selected-label {
+    background-color: $selected-label-background !important;
+    border: 2px solid $selected-labe-border !important;
+}
+
+.has-error {
+    background-color: $selected-label-background !important;
+    border: 2px solid $error-message !important;
+}
+
+.ellipsis-on {
+  text-overflow: ellipsis;
+  max-width: 155px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ellipsis-on:hover{
+  overflow: visible;
+}

@@ -1,0 +1,33 @@
+<ion-view view-title="MY ORDERS">
+  <ion-content class="padding car-service-bg my-orders long-background">
+
+    <div class="container" style="padding-bottom: 60px;">
+      <div class="order" ng-repeat="order in orders" ng-click="selectOrder(order)">
+        <h3 class="order-status uppercase"><span ng-if="order.status == 'Achitat'">Paid</span></h3>
+        <h2 class="order-info">
+          <span class="order-number">#{{order.uuid}}</span>
+          <span>{{order.references.booking.schedule.date | date: 'dd/MM/yyyy'}}</span>
+          <span>{{order.references.booking.schedule.date | date: 'HH:mm a'}}</span>
+        </h2>
+        <div class="location-info">
+          <div class="pickers">
+            <i class="icon ion-record destination"></i>
+            <i class="icon ion-record origin"></i>
+          </div>
+          <div class="right-info">
+            <h2 class="location ellipsis-on">
+              {{order.references.booking.origin}}
+            </h2>
+            <h2 class="location ellipsis-on">
+
+              {{order.references.booking.destination}}
+            </h2>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <img class='forward-arrow' ng-src="img/forward-arrow.png">
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

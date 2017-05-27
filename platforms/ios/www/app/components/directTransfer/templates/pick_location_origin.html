@@ -1,0 +1,42 @@
+<ion-view view-title="" hide-back-button="true" hide-nav-bar="true">
+  <div class="bar bar-header">
+    <header class="padding">
+      <form name="userForm" autocomplete="off" novalidate>
+        <div class="row">
+          <div class="col col-80">
+            <div class="pick-label item item-input">
+              <i class="ion ion-search" ng-class="{'i-active': selected}"></i>
+              <input name="from" id="origin" ng-change="getPrediction()" class="search-input ellipsis2-on" type="text" placeholder="" ng-model="transfer.origin" ng-focus="selected=1" ng-blur="selected=0">
+              <button ng-cloak ng-click="reset()" class="button-reset" ng-show="transfer.origin.length" type="reset"><i class="ion ion-ios-close"></i></button>
+            </div>
+
+          </div>
+          <div class="col">
+
+            <button ng-click="cancel()" class="form-clear-button">cancel</button>
+          </div>
+
+        </div>
+      </form>
+      <div class="row header-text">
+        <div class="col">
+          <h5 class="">{{category}}</h5>
+        </div>
+      </div>
+
+  </header>
+  </div>
+
+  <ion-content class="pick-location long-background" scroll="true">
+
+
+    <ion-list class="location-list padding">
+      <ion-item ng-click="saveLocation(place)" ng-repeat="place in predictions">
+        <div class="title">{{place.location}}</div>
+        <div class="subtitle">{{place.description}}</div>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-view>

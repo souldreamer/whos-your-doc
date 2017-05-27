@@ -1,0 +1,206 @@
+
+.platform-ios {
+  .login {
+    .button-wrapper {
+      &.keyboard-open {
+        position: static !important;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+ion-content.auth {
+
+  .scroll {
+    height: 100%;
+  }
+  form {
+    width: 100%;
+    //max-width: 350px;
+    margin: 0 auto;
+    span.input-label {
+      text-transform: uppercase;
+    }
+  }
+
+  &.login {
+
+
+    .list {
+      height: 80%;
+      form {
+        height: 100%;
+        position: relative;
+        .button-wrapper {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &.register {
+    .scroll {
+      height: 100%;
+    }
+    &.myaccount {
+      .button-wrapper {
+        padding-bottom: 100px !important;
+      }
+    }
+    .list {
+      height: 80%;
+      form {
+        height: 100%;
+        position: relative;
+        .button-wrapper {
+          //position: absolute;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          &.keyboard-open {
+            position: static !important;
+            width: 100%;
+            padding-top: 0;
+            margin-top: 0;
+            padding-bottom: 20px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+	&.forgotpass {
+    padding-bottom: 20px !important;
+		.scroll {
+			height: 100%;
+		}
+    .list {
+      height: 80%;
+      form {
+        margin-top: 20px;
+        height: 100%;
+        position: relative;
+        .button-wrapper {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          text-align: center;
+          &.keyboard-open {
+            position: static !important;
+            width: 100%;
+            padding-top: 0;
+            margin-top: 0;
+            padding-bottom: 20px;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+  }
+  .list {
+    margin: 20px auto;
+    width:100%;
+
+  }
+  p {
+    color: $stable;
+    width: 100%;
+    //max-width: 300px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: latolight;
+    font-size: 14px;
+    a {
+      padding: 10px !important;
+    }
+  }
+  .help-block {
+    color: $error-message !important;
+    //margin-top: -10px;
+    //margin-bottom: -8px;
+    //margin-left: 15px;
+    text-align: left;
+    font-size: 12px;
+    padding-left:15px;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  //.animated {
+  //  animation-duration: 0.01s !important;
+  //}
+  .dropdown-display {
+    background-color: transparent!important;
+  }
+  .item-content {
+    margin-top: -10px;
+  }
+  .button-wrapper {
+    text-align: center;
+    margin-top: 5%;
+    padding-bottom: 20px !important;
+  }
+  .short-top-margin {
+    margin-top: -5px !important;
+  }
+  .signin-buttom-wrapper {
+    margin-top: 90px;
+  }
+
+
+}
+
+@media screen and (max-height: 350px) {
+
+  ion-content.auth {
+    &.login {
+      .list {
+        height: 100%;
+        form {
+          height: 80%;
+          .button-wrapper {
+            position: static;
+            width: 100%;
+            padding-bottom: 20px;
+            text-align: center;
+          }
+        }
+      }
+
+    }
+    &.register {
+      .list {
+        height: 100%;
+        form {
+          height: 80%;
+          .button-wrapper {
+            position: static;
+            width: 100%;
+            padding-bottom: 20px;
+            text-align: center;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width : 320px) and (max-height : 550px) {
+  ion-content.auth {
+    .list {
+      margin-top: 0;
+    }
+    .button-wrapper {}
+    .short-top-margin {
+      margin-top: -15px !important;
+    }
+  }
+}

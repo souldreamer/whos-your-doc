@@ -1,0 +1,12 @@
+/*
+{
+  "name": "proxy-example",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/auth/login",
+      "proxyUrl": "http://0.0.0.0:8000/auth/login"
+    }
+  ]
+}
+*/

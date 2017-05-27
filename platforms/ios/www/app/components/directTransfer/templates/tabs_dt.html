@@ -1,0 +1,18 @@
+<ion-tabs class="tabs-icon-top tabs-color-active-positive dt-tabs tabs-top disable-clickon-tabs" ng-class="{'visitedLocationTab': visitedLocationTab }">
+
+  <ion-tab class="locationItem" icon-off="icon icon-circle icon-visited" icon-on="icon icon-circle icon-visited icon-active"  href="#/directTransfer/tab/location">
+    <ion-nav-view name="tab-location"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab class="successItem" icon-off="icon icon-circle icon-visited" icon-on="icon icon-circle icon-active" href="#/directTransfer/tab/service">
+    <ion-nav-view name="tab-service"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab icon-off="icon icon-circle" icon-on="icon icon-circle icon-active" href="#/directTransfer/tab/overview">
+    <ion-nav-view name="tab-overview"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab icon-off="icon icon-circle" icon-on="icon icon-circle icon-active" href="#/directTransfer/tab/success">
+    <ion-nav-view name="tab-success"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

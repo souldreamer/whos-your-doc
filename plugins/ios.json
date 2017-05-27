@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.newhaircut.citylimo"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,67 @@
+//ion-tabs.main-tabs.tabs-color-active-positive .tab-item.activated,
+//ion-tabs.main-tabs.tabs-color-active-positive .tab-item.active,
+//ion-tabs.main-tabs.tabs-color-active-positive .tab-item.tab-item-active {
+//  color: $homescreen-icons-active-background;
+//  border-top: 1px solid $homescreen-icons-active-background;
+//}
+//
+//ion-tabs.tabs-color-active-positive .tab-item {
+//  color: $homescreen-icons-background;
+//  border-top: 1px solid transparent;
+//}
+[class*=" icon-"]:before, [class^=icon-]:before{
+  font-family: custom-icon-1 !important;
+}
+ion-tabs.main-tabs {
+
+  .tabs {
+    padding-top: 0 !important;
+    background: url('../img/background-rectangle-title.png') !important;
+    background-repeat: repeat-x !important;
+    background-size: 100% 100%;
+    border: none !important;
+    font-family: custom-icon-1 !important;
+
+    .tab-item {
+
+      .icon {
+        font-size: 25px;
+        line-height: 40px;
+
+        &:before {
+          color: $homescreen-icons-background;
+        }
+      }
+      .icon, .tab-title {
+        color: $homescreen-icons-background!important;
+      }
+
+      &.tab-item-active {
+
+        .icon {
+          font-size: 25px;
+          line-height: 40px;
+
+          &:before {
+            color: $homescreen-icons-active-background;
+          }
+        }
+        .icon, .tab-title {
+          color: $homescreen-icons-active-background!important;
+        }
+      }
+    }
+
+  }
+  //.icon {
+  //  font-size: 25px;
+  //  color: $homescreen-icons-background;
+  //  line-height: 40px;
+  //}
+  //&.tabs-color-active-positive .tab-item.tab-item-active {
+  //  color: $homescreen-icons-active-background !important;
+  //}
+  //.icon-active {
+  //  color: $homescreen-icons-active-background;
+  //}
+}
