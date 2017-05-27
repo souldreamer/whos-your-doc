@@ -1,14 +1,20 @@
-import { Schema, model, Document, Types } from 'mongoose';
+import { Schema, model, Document } from 'mongoose';
 
 export const Averageable = new Schema({
 	total: Schema.Types.Number,
 	numEntries: Schema.Types.Number
 });
 
+export const Geolocation = new Schema({
+	lat: Schema.Types.Number,
+	lng: Schema.Types.Number
+});
+
 export const Doctor = model('Doctor', new Schema({
 	name: {type: Schema.Types.String, required: true, index: true},
 	gender: {type: Schema.Types.String, enum: ['male', 'female'], required: true},
-	price: {type: Schema.Types.Number, enum: [1, 2, 3]},
+	avatar: Schema.Types.String,
+	price: Averageable,
 	friendliness: Averageable,
 	punctuality: Averageable,
 	knowledge: Averageable,
@@ -16,28 +22,36 @@ export const Doctor = model('Doctor', new Schema({
 	profession: Schema.Types.String,
 	bio: Schema.Types.String,
 	address: Schema.Types.String,
-	practiceName: Schema.Types.String
+	practiceName: Schema.Types.String,
+	geo: Geolocation
 }));
 
-export class AverageableNumber {
+export interface AverageableDocument {
 	total?: number;
 	numEntries?: number;
 }
-export function getAverageableValue(num: AverageableNumber): number {
+export function getAverageableValue(num: AverageableDocument): number {
 	return (num.total != null && num.numEntries != null && num.numEntries != 0)
 		? num.total / num.numEntries : 0;
+}
+
+export interface GeolocationDocument {
+	lat: number,
+	lng: number
 }
 
 export interface DoctorDocument extends Document {
 	name: string;
 	gender: string;
-	price?: number;
-	friendliness?: AverageableNumber;
-	punctuality?: AverageableNumber;
-	knowledge?: AverageableNumber;
+	avatar?: string;
+	price?: AverageableDocument;
+	friendliness?: AverageableDocument;
+	punctuality?: AverageableDocument;
+	knowledge?: AverageableDocument;
 	specialties?: string[];
 	profession?: string;
 	bio?: string;
 	address?: string;
 	practiceName?: string;
+	geo?: GeolocationDocument;
 }

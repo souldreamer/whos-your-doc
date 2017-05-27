@@ -13,7 +13,6 @@ import { config as dotEnvConfig } from 'dotenv';
 import { DbServer, JwtSecret } from './src/shared/env.tokens';
 import { RouteRenderFunction, NextFunction, Request, Response } from './src/routes/Route';
 import UserRoute from './src/routes/User';
-import { Reports, MeterProfile } from './src/routes/reports/index';
 dotEnvConfig();
 
 (mongoose as any).Promise = global.Promise;
@@ -30,8 +29,7 @@ const injector = ReflectiveInjector.resolveAndCreate([
 	Store,
 	Setup,
 	Authenticate,
-	UserRoute,
-	...Reports
+	UserRoute
 ]);
 
 function wrapAsyncRoute(routeFn: RouteRenderFunction) {
@@ -47,8 +45,5 @@ function wrapAsyncRoute(routeFn: RouteRenderFunction) {
 Server.bootstrap([
 	{method: [], isMiddleware: true, path: '/api', route: injector.get(Authenticate).authVerification},
 	{method: 'GET', path: '/onetime/setup', route: injector.get(Setup).execute},
-	{method: 'POST', path: '/api/authenticate', route: wrapAsyncRoute(injector.get(Authenticate).auth)},
-	{method: 'GET', path: '/api/areas', route: injector.get(UserRoute).getAreas},
-	{method: 'GET', path: '/api/meters', route: wrapAsyncRoute(injector.get(UserRoute).getMeters)},
-	{method: 'GET', path: '/api/reports/meter-profile', route: wrapAsyncRoute(injector.get(MeterProfile).generate)}
+	{method: 'POST', path: '/api/authenticate', route: wrapAsyncRoute(injector.get(Authenticate).auth)}
 ]);
