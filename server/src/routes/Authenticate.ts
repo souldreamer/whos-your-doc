@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response } from './Route';
-import { Inject, Injectable } from 'injection-js';
-import { JwtSecret } from '../shared/env.tokens';
+import { Injectable } from 'injection-js';
 import { autobind } from 'core-decorators';
 import { UserDocument } from '../models/user.model';
 
