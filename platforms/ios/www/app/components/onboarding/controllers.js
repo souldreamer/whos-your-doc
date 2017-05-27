@@ -1,4 +1,4 @@
-angular.module('citylimo.controllers')
+angular.module('whos_your_doc.controllers')
 
 .controller('onboardingCtrl', function($scope, $state, StorageService, $ionicSlideBoxDelegate) {
   // StorageService.addSession('firstUse', false);

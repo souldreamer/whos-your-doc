@@ -1,4 +1,4 @@
-angular.module('citylimo.services')
+angular.module('whos_your_doc.services')
   .service('DTransfer', function () {
 
     this.data = {
