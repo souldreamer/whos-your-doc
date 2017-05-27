@@ -1,0 +1,386 @@
+/*
+    CSS styles to eliminate the annoying flickering header when changing tabs in an Ionic app on Android:
+    http://forum.ionicframework.com/t/flickering-when-navigating-via-tabs-on-android/27281/2
+*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.platform-android .header-item.title {
+  transition-duration: 0ms;
+}
+.platform-android .header-item.buttons {
+  transition-duration: 0ms;
+}
+.ui-page {
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.flex-container {
+  display: flex;
+}
+.button-custom-outline {
+  border: 1px solid $button-red;
+}
+ion-nav-view { background-color: transparent !important; }
+.about {
+
+  .flex-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .logo-container {
+    margin: -150px auto 0;
+    width: 150px;
+    height: 100px;
+    background: url('../img/logo.png') no-repeat center;
+    background-size: 100%;
+  }
+
+  a {
+    color: $homescreen-icons-active-background;
+  }
+}
+a, span a {
+  color: #ffffff;
+}
+
+.item-input {
+
+  textarea {
+    word-wrap: break-word;
+    resize: none;
+    background: transparent;
+    color: #fff !important;
+    opacity:1;
+    font-size: 13px;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+    overflow: visible;
+
+  }
+}
+
+.ellipsis-on:hover {
+  overflow: hidden;
+}
+.bar {
+  border: 0 !important;
+  border-bottom-color: transparent !important;
+  background-image: none !important;
+  border-bottom: none !important;
+}
+.view-container {
+    height: 100%;
+}
+.scroll-bar-indicator
+{
+  display: none;
+}
+.scroll {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.scroll-view.scroll-x {
+  overflow-x: hidden;  /* default value is 'scroll' */
+}
+.pane {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+ion-content {
+    height: 100% !important;
+    font-family: latoregular, sans-serif !important;
+}
+.lowercase {
+    font-size: 13px;
+    text-transform: none !important;
+}
+ion-header-bar .title {
+    font-family: oswald_regularregular;
+    font-size: 16px;
+    color: $light !important;
+    text-align: center !important;
+    word-spacing: 0.91px;
+    line-height: 21px;
+    left: 0px !important;
+    right: 0px !important;
+    transform: none !important;
+    transition: none!important;
+}
+
+ion-header-bar {
+    background-color: $iv-background !important;
+}
+
+.has-header{
+  top: 43px !important;
+}
+
+.car-service-bg{
+  background-image:linear-gradient(-1deg, #004f4e 14%, #002835 62%, #031b22 76%, #001217 84%);
+}
+
+.background {
+
+    //background: url('../img/on-top.png'), url('../img/background-rectangle.png');
+    background-blend-mode: multiply !important;
+    background-repeat: no-repeat;
+    ////background-attachment: fixed;
+    background-size: 100% 100%;
+    ////background-size: cover;
+    ///*background-color: #0b0b0b !important;*/
+
+  background: url('../img/on-top.png'), -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(0, 0, 0) 40%, rgb(4, 56, 64) 100%);
+  background: url('../img/on-top.png'), -o-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(0, 0, 0) 40%, rgb(4, 56, 64) 100%);
+  background: url('../img/on-top.png'), -ms-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(0, 0, 0) 40%, rgb(4, 56, 64) 100%);
+  background: url('../img/on-top.png'), -moz-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(0, 0, 0) 40%, rgb(4, 56, 64) 100%);
+  background: url('../img/on-top.png'), linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(0, 0, 0) 40%, rgb(4, 56, 64) 100%);
+
+}
+
+.long-background {
+  margin: 0;
+  background: -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(4, 56, 64) 100%);
+  background: -o-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(4, 56, 64) 100%);
+  background: -ms-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(4, 56, 64) 100%);
+  background: -moz-linear-gradient(top, rgb(0, 0, 0)0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(4, 56, 64) 100%);
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(11, 12, 12) 1%, rgb(10, 12, 12) 2%, rgb(4, 56, 64) 100%);
+  //background: url('../img/on-top.png'), url('../img/long-rectangle.png');
+  //background-blend-mode: multiply !important;
+  //background-repeat: no-repeat;
+  ////background-attachment: fixed;
+    //background-size: 100% 100%;
+    //background-size: cover;
+    /*background-color: #0b0b0b !important;*/
+}
+
+.splash-background:after{
+  content:'';
+  opacity: 0.6;
+  background-color: $active-input;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:0;
+  left:0;
+}
+
+.splash-background{
+  background: url('../img/on-top.png'), url('../img/driving.jpg');
+  background-blend-mode: multiply !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.onboarding-back1:after{
+  content:'';
+  opacity: 0.6;
+  background-color: $active-input;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:0;
+  left:0;
+}
+.onboarding-back2:after{
+  content:'';
+  opacity: 0.6;
+  background-color: $active-input;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:0;
+  left:0;
+}
+.onboarding-back3:after{
+  content:'';
+  opacity: 0.6;
+  background-color: $active-input;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:0;
+  left:0;
+}
+.onboarding-back1{
+  background: url('../img/on-top.png'), url('../img/onboarding1.png');
+  background-blend-mode: multiply !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position:relative;
+}
+
+.onboarding-back2{
+  background: url('../img/on-top.png'), url('../img/onboarding2.png');
+  background-blend-mode: multiply !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position:relative;
+}
+
+.onboarding-back3{
+  background: url('../img/on-top.png'), url('../img/onboarding3.png');
+  background-blend-mode: multiply !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position:relative;
+}
+.popup-container {
+  .popup {
+    background-color: $label-background !important;
+    border-radius: 5px;
+    box-shadow: 0 0 #111d37;
+    padding: 10px 15px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: $light;
+    .popup-head {
+      border-bottom-color: $header-text-color;
+      .popup-title {
+        color: $light !important;
+        font-family: oswald_regularregular;
+        font-size: 18px;
+      }
+    }
+    .popup-body {
+      span {
+        font-family: latolight;
+      }
+    }
+    .popup-buttons {
+      .button.button-positive {
+        font-family: oswald_regularregular;
+        line-height: 47px !important;
+        width: 100%;
+        max-width: 350px;
+        height: 50px !important;
+        //border-radius: 0 !important;
+        //margin: 20px 0 20px 0;
+        font-size: 16px !important;
+        background-color: $inactive-buttons-tabs !important;
+        color: $light !important;
+        border: 1px solid $inactive-buttons-tabs;
+      }
+      .button.button-positive:hover {
+        background: darken($button-red, 54%)!important;
+        transition: 0.1s;
+      }
+
+    }
+  }
+}
+.loading-container .loading {
+  background-color: $label-background !important;
+  border-radius: 20px;
+  box-shadow: 0 0 0 #111d37;
+  padding: 25px 9px !important;
+  width: 117px;
+  height: 117px;
+  .spinner svg {
+    fill: $light;
+    stroke: $light;
+  }
+  h4 {
+    font-family: latolight;
+    font-size: 12px;
+    letter-spacing: 0.58px;
+    text-align: center;
+  }
+}
+p {
+    color: $stable;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: latolight;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.spacing {
+    margin-bottom: 40px;
+}
+
+.family {
+    font-family: oswald_regularregular;
+    font-size: 16px;
+}
+
+.assertive-color {
+    color: $assertive;
+}
+
+.stable-color {
+    color: $light;
+}
+
+.dark-color {
+    color: $dark-blue;
+}
+.dark-background {
+  background-color: #08111F;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.animated{
+    animation-duration: 0.4s !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.margin {
+    margin-top: 50px !important;
+}
+
+.ordered-list li {
+    margin-left: 30px;
+    list-style-type: decimal;
+    color: $button-red;
+    margin-top: 30px;
+}
+
+.ordered-list span {
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+.notexttransform {
+    text-transform: none !important;
+}
+.clearfix {
+  clear: both;
+}
+
+.account-info{
+  max-width: 100%!important;
+  height:20px;
+  padding-bottom:30px;
+  background:#020607;
+  .personal-info{
+    font-family:latoregular;
+    font-size:12px;
+    color:#3f6670 !important;
+    letter-spacing:0.5px;
+    text-align: left;
+    line-height: 30px;
+    padding-left:15px;
+  }
+}

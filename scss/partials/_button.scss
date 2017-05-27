@@ -1,0 +1,96 @@
+.button {
+    font-family: oswald_regularregular;
+    line-height: 47px !important;
+}
+
+.red-button {
+    width: 100%;
+    max-width: 350px;
+    height: 47px !important;
+    border-radius: 0 !important;
+    margin: 20px 0 20px 0;
+    font-size: 16px !important;
+    background-color: $button-red !important;
+    color: $light !important;
+    border: 1px solid $button-red;
+}
+
+.eco-button{
+  width: 100%;
+  max-width: 350px;
+  height: 47px !important;
+  border-radius: 0 !important;
+  margin: 20px 0 20px 0;
+  font-size: 16px !important;
+  background-color: #76ad00 !important;
+  color: $light !important;
+  border: 1px solid #76ad00;
+}
+
+.red-button-outline {
+    border: 1px solid $button-red !important;
+    background-color: transparent !important;
+    color: $button-red !important;
+}
+
+.header-button {
+    font-family: latoregular;
+    font-size: 12px !important;
+    word-spacing: 0.5px;
+    line-height: 15px;
+}
+
+.red-button:hover {
+    background: darken($button-red, 54%)!important;
+    transition: 0.1s;
+}
+
+.green-button {
+    width: 100%;
+    max-width: 114px !important;
+    height: 114px !important;
+    border-radius: 25px;
+    padding: 0px !important;
+    margin: 20px 0 20px 0;
+    font-size: 16px !important;
+    text-align: center;
+    //background-color: $button-red !important;
+    //color: $light !important;
+    border: none !important;
+    background: $homescreen-mainicon-background !important;
+    border-radius: 10% !important;
+    .img {
+        width: 114px;
+        height: 114px;
+    }
+}
+.green-button:active{
+    background: $homescreen-mainicon-background-action !important;
+}
+
+.absolute{
+  position: absolute;
+  right:0;
+  font-size:17px;
+  font-family: latoregular;
+  padding-right: 20px !important;
+  z-index: 1;
+}
+
+.back-button{
+  padding-left: 20px !important;
+  line-height: 20px !important;
+}
+
+.cancel{
+  padding-right: 20px !important;
+  line-height: 20px !important;
+}
+
+.button.disabled, .button[disabled] {
+  border: none !important;
+}
+
+.button.activated, .button.active {
+  border: none !important;
+}

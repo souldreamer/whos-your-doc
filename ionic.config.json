@@ -1,0 +1,13 @@
+{
+  "name": "whos_your_doc",
+  "app_id": "a992f928",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "type": "ionic1"
+}
