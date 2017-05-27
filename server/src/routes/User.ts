@@ -1,20 +1,9 @@
-import { JwtDecodedRequest } from './Authenticate';
-import { Response } from './Route';
-import { getUserAreas } from '../models/area.model';
-import { getUserMeters } from '../models/meter.model';
-import { mapToObjectId } from '../shared/utils';
 import { Injectable } from 'injection-js';
-import { Types } from 'mongoose';
-
-interface MeterFilter {
-	id: string; // exact match
-	area: string;
-	name: string;
-	general: string;
-}
 
 @Injectable()
 export default class User {
+	
+	/*
 	getAreas(req: JwtDecodedRequest, res: Response) {
 		const areaRights = mapToObjectId(req.decoded.areaRights || []);
 		res.status(200).json(getUserAreas(areaRights));
@@ -60,5 +49,5 @@ export default class User {
 			start,
 			data: userMeters
 		});
-	}
+	}*/
 }
