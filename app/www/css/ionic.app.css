@@ -10192,6 +10192,9 @@ label {
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d; }
 
+ion-content {
+  margin-top: 20px !important; }
+
 .flex-container {
   display: flex; }
 
