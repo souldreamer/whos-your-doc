@@ -24,10 +24,26 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider, $
             templateUrl: 'app/components/onboarding/templates/landing_page.html',
             controller: 'landingCtrl'
         })
+        // .state('main', {
+        //     url: '/main',
+        //     templateUrl: 'app/components/main/templates/contact.html',
+        //     controller: 'mainCtrl'
+        // });
+
         .state('main', {
             url: '/main',
-            templateUrl: 'app/components/main/templates/contact.html',
+            abstract: true,
+            templateUrl: 'app/components/main/templates/menu.html',
             controller: 'mainCtrl'
+        })
+
+        .state('main.search', {
+            url: '/search',
+            views: {
+                'menuContent': {
+                    templateUrl: 'app/components/main/templates/search.html'
+                }
+            }
         });
 
     $urlRouterProvider.otherwise('/onboarding');
