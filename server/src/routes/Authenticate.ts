@@ -1,11 +1,8 @@
 import { NextFunction, Request, Response } from './Route';
-import { User, UserDocument } from '../models/user.model';
-import * as password from 'password-hash-and-salt';
 import { Inject, Injectable } from 'injection-js';
 import { JwtSecret } from '../shared/env.tokens';
-import * as jwt from 'jsonwebtoken';
 import { autobind } from 'core-decorators';
-import { JsonWebTokenError, NotBeforeError, TokenExpiredError } from 'jsonwebtoken';
+import { UserDocument } from '../models/user.model';
 
 export interface JwtDecodedRequest extends Request {
 	decoded: UserDocument;
