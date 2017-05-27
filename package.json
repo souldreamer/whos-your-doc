@@ -3,6 +3,13 @@
     "version": "1.1.1",
     "description": "whos_your_doc: An Ionic project",
     "dependencies": {
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-console": "~1.0.4",
+        "cordova-plugin-device": "~1.1.3",
+        "cordova-plugin-splashscreen": "~3.2.2",
+        "cordova-plugin-statusbar": "~2.1.3",
+        "cordova-plugin-whitelist": "~1.2.2",
+        "cordova.plugins.diagnostic": "cordova.plugins.diagnostic",
         "gulp": "^3.5.6",
         "gulp-concat": "^2.2.0",
         "gulp-minify-css": "^0.3.0",
@@ -10,12 +17,6 @@
         "gulp-sass": "^2.0.4",
         "ionic-datepicker": "^1.1.0",
         "ionic-native-transitions": "^1.0.2",
-        "cordova-plugin-console": "~1.0.4",
-        "cordova-plugin-device": "~1.1.3",
-        "cordova-plugin-splashscreen": "~3.2.2",
-        "cordova-plugin-statusbar": "~2.1.3",
-        "cordova-plugin-whitelist": "~1.2.2",
-        "cordova.plugins.diagnostic": "cordova.plugins.diagnostic",
         "ionic-plugin-keyboard": "ionic-plugin-keyboard",
         "onesignal-cordova-plugin": "~2.0.10"
     },
@@ -52,6 +53,9 @@
             "cordova.plugins.diagnostic": {},
             "ionic-plugin-keyboard": {},
             "onesignal-cordova-plugin": {}
-        }
+        },
+        "platforms": [
+            "ios"
+        ]
     }
 }

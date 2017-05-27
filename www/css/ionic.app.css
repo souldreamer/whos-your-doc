@@ -10948,1194 +10948,240 @@ ion-tabs.main-tabs .tabs {
   ion-tabs.main-tabs .tabs .tab-item.tab-item-active .icon, ion-tabs.main-tabs .tabs .tab-item.tab-item-active .tab-title {
     color: #F5533D !important; }
 
-ion-content.dt-controls-wrapper {
+@font-face {
+  font-family: 'nlicons';
+  src: url("../fonts/nlicons/nlicons.eot");
+  src: url("../fonts/nlicons/nlicons.eot?#iefix") format("embedded-opentype"), url("../fonts/nlicons/nlicons.woff") format("woff"), url("../fonts/nlicons/nlicons.ttf") format("truetype"), url("../fonts/nlicons/nlicons.svg#nlicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* general style for the form */
+.nl-form {
   width: 100%;
-  background-image: linear-gradient(0deg, #031e26 0%, #002a39 40%, #071317 100%); }
-
-ion-content.directTransfer {
-  padding: 0 !important; }
-  ion-content.directTransfer .item-input {
-    padding-bottom: 0; }
-    ion-content.directTransfer .item-input textarea::-webkit-input-placeholder {
-      line-height: 32px; }
-    ion-content.directTransfer .item-input textarea:-moz-placeholder {
-      line-height: 32px; }
-    ion-content.directTransfer .item-input textarea::-moz-placeholder {
-      line-height: 32px; }
-    ion-content.directTransfer .item-input textarea:-ms-input-placeholder {
-      line-height: 32px; }
-  ion-content.directTransfer .map-wrapper {
-    margin-top: 0;
-    height: -webkit-calc(100% - 309px);
-    height: -moz-calc(100% - 309px);
-    height: calc(100% - 309px); }
-  ion-content.directTransfer #map {
-    margin: 0;
-    -webkit-filter: blur(0);
-    width: 100%;
-    height: 100%; }
-  ion-content.directTransfer h5 {
-    font-family: latoregular;
-    font-size: 14px !important;
-    color: #fff;
-    margin: 0 !important;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: #fff; }
-  ion-content.directTransfer .button-wrapper {
-    width: 100%;
-    text-align: center; }
-  ion-content.directTransfer .item-input .icon {
-    font-size: 8px; }
-  ion-content.directTransfer .directTransfer-container {
-    position: fixed;
-    bottom: 0;
-    transition: all 0.2s;
-    width: 100%; }
-    ion-content.directTransfer .directTransfer-container.move-top {
-      position: relative;
-      top: 30px; }
-    ion-content.directTransfer .directTransfer-container .help-block {
-      margin-bottom: 10px;
-      color: #971315;
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center; }
-    ion-content.directTransfer .directTransfer-container input {
-      font-size: 16px; }
-    ion-content.directTransfer .directTransfer-container .padding-action {
-      padding-left: 20px; }
-    ion-content.directTransfer .directTransfer-container .pick-date {
-      font-size: 12px;
-      color: #3f6670;
-      padding-left: 7px; }
-      ion-content.directTransfer .directTransfer-container .pick-date.active {
-        color: white; }
-    ion-content.directTransfer .directTransfer-container .text-label {
-      color: #a2a2a2;
-      padding-top: 0;
-      font-family: latoregular;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-      text-align: left;
-      margin-bottom: 2px !important; }
-      ion-content.directTransfer .directTransfer-container .text-label.flex-container {
-        justify-content: space-between;
-        padding: 0 10px; }
-        ion-content.directTransfer .directTransfer-container .text-label.flex-container .flex-item {
-          width: 50%; }
-          ion-content.directTransfer .directTransfer-container .text-label.flex-container .flex-item:nth-child(2) {
-            padding-left: 10px; }
-      ion-content.directTransfer .directTransfer-container .text-label .padding-pick {
-        padding-right: 25px; }
-      ion-content.directTransfer .directTransfer-container .text-label .padding-pick-top {
-        padding-right: 15px; }
-      ion-content.directTransfer .directTransfer-container .text-label span.title {
-        color: #fff;
-        font-size: 12px; }
-      ion-content.directTransfer .directTransfer-container .text-label input {
-        padding-left: 20px; }
-    ion-content.directTransfer .directTransfer-container .continue-button {
-      margin: 0 !important;
-      max-width: none !important;
-      border-radius: 0 !important; }
-    ion-content.directTransfer .directTransfer-container .selected-label {
-      background-color: #040F15 !important;
-      border: 2px solid #003640 !important; }
-    ion-content.directTransfer .directTransfer-container a {
-      display: block;
-      width: 100%; }
-    ion-content.directTransfer .directTransfer-container label {
-      border-radius: 0 !important;
-      max-width: 100%;
-      padding-left: 10px;
-      margin-top: 0 !important;
-      background-color: #094051 !important; }
-      ion-content.directTransfer .directTransfer-container label ::-webkit-input-placeholder {
-        color: #3f6670;
-        font-family: latoregular;
-        font-size: 16px;
-        text-align: left; }
-      ion-content.directTransfer .directTransfer-container label input {
-        padding-left: 10px; }
-      ion-content.directTransfer .directTransfer-container label .ellipsis-on {
-        max-width: 95% !important; }
-      ion-content.directTransfer .directTransfer-container label .origin {
-        font-size: 11px;
-        color: #43a39b; }
-      ion-content.directTransfer .directTransfer-container label .destination {
-        font-size: 11px;
-        color: #F64B34; }
-    ion-content.directTransfer .directTransfer-container .row {
-      width: 100%;
-      max-width: 500px;
-      padding: 0;
-      margin-bottom: 15px;
-      justify-content: space-between; }
-      ion-content.directTransfer .directTransfer-container .row .col {
-        margin: 0 !important;
-        text-align: center;
-        width: 100%;
-        max-width: 120px;
-        height: 115px; }
-        ion-content.directTransfer .directTransfer-container .row .col:first-child {
-          padding-left: 0; }
-        ion-content.directTransfer .directTransfer-container .row .col:last-child {
-          padding-right: 0; }
-        ion-content.directTransfer .directTransfer-container .row .col button {
-          width: auto;
-          height: 110px !important; }
-        ion-content.directTransfer .directTransfer-container .row .col .pick-up {
-          margin-top: 3.4px !important;
-          margin-bottom: 0px !important; }
-          ion-content.directTransfer .directTransfer-container .row .col .pick-up.negative-top-margin {
-            margin-top: -14px !important; }
-        ion-content.directTransfer .directTransfer-container .row .col .pick-date {
-          font-family: oswald_regularregular;
-          font-size: 16px;
-          color: #3f6670;
-          width: 100%;
-          max-width: 100px; }
-          ion-content.directTransfer .directTransfer-container .row .col .pick-date.time {
-            font-size: 28px;
-            margin-top: 3.9px;
-            margin-bottom: 0; }
-          ion-content.directTransfer .directTransfer-container .row .col .pick-date.date {
-            margin-top: 0;
-            margin-bottom: 0; }
-        ion-content.directTransfer .directTransfer-container .row .col .pick-date.date.ng-binding {
-          color: #fff; }
-        ion-content.directTransfer .directTransfer-container .row .col .pick-date.time.ng-binding {
-          color: #fff; }
-        ion-content.directTransfer .directTransfer-container .row .col .selectedInputValue {
-          background: transparent;
-          border: none;
-          max-width: 100px;
-          width: 100%;
-          color: #fff;
-          text-align: center;
-          font-size: 28px;
-          padding-top: 0 !important;
-          font-family: oswald_regularregular; }
-        ion-content.directTransfer .directTransfer-container .row .col .size:hover {
-          background-color: #040F15 !important; }
-
-a[href^="http://maps.google.com/maps"] {
-  display: none !important; }
-
-a[href^="https://maps.google.com/maps"] {
-  display: none !important; }
-
-.gmnoprint a, .gmnoprint span, .gm-style-cc {
-  display: none; }
-
-.gmnoprint div {
-  background: none !important; }
-
-.tab-item {
-  max-width: 120px !important; }
-
-.platform-ios.platform-cordova:not(.fullscreen) .bar-subheader, .platform-ios.platform-cordova:not(.fullscreen) .has-header, .platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
-  top: 63px !important; }
-
-ion-tabs.dt-tabs .tabs {
-  background-image: none !important;
-  padding: 0 !important;
-  border: none !important;
-  height: 21px !important;
-  width: 110% !important;
-  margin-left: -4% !important; }
-
-ion-tabs.dt-tabs.tabs-color-active-positive .tab-item.activated,
-ion-tabs.dt-tabs.tabs-color-active-positive .tab-item.active,
-ion-tabs.dt-tabs.tabs-color-active-positive .tab-item.tab-item-active {
-  z-index: 1; }
-
-ion-tabs.tabs-color-active-positive .tab-item {
-  opacity: 1; }
-
-ion-tabs.dt-tabs .tab-item {
-  max-width: 140px !important; }
-
-.tab-nav .tabs {
-  border-color: transparent !important; }
-
-ion-tabs.dt-tabs .tab-item {
-  border-bottom-color: transparent !important;
-  background-image: none !important;
-  border-color: transparent !important; }
-
-ion-tabs.dt-tabs .tab-item i {
-  position: relative;
-  z-index: 99; }
-
-ion-tabs.dt-tabs .tab-item:after {
-  content: '';
-  width: 25%;
-  height: 1px;
-  position: absolute;
-  margin-left: -25%;
-  margin-top: -22.7px;
-  background-color: #3f636e;
-  z-index: -5; }
-
-ion-tabs.dt-tabs .tab-item.tab-item-active:after {
-  content: '';
-  width: 25%;
-  height: 1px;
-  position: absolute;
-  margin-left: -25%;
-  margin-top: -22.7px;
-  background-color: #fff;
-  z-index: -5; }
-
-ion-tabs.dt-tabs .tab-item.tab-item-active:before {
-  content: '';
-  width: 25%;
-  height: 1px;
-  top: 50%;
-  position: absolute;
-  margin-left: -50%;
-  background-color: #fff;
-  z-index: -5; }
-
-ion-tabs.dt-tabs .tab-item-active:nth-child(6):before {
-  display: none; }
-
-ion-tabs.dt-tabs .tab-item-active:nth-child(5):before {
-  display: none; }
-
-ion-tabs.dt-tabs .tab-item.locationItem {
-  z-index: 2; }
-
-ion-tabs.dt-tabs .tab-item.locationItem:after {
-  content: none;
-  background-color: transparent; }
-
-ion-tabs.dt-tabs .tab-item.locationItem:before {
-  overflow: hidden; }
-
-ion-tabs.dt-tabs .tabs {
-  background-color: #071317 !important;
-  border: none !important; }
-  ion-tabs.dt-tabs .tabs .icon:before {
-    font-family: untitled-font-8 !important;
-    z-index: 1; }
-
-ion-tabs.dt-tabs .icon {
-  font-size: 6px;
-  color: #3f636e;
-  line-height: 20px;
-  z-index: 1; }
-
-ion-tabs.dt-tabs.visitedLocationTab .icon.icon-visited {
   color: #fff;
-  z-index: 1; }
-
-ion-tabs.dt-tabs.visitedLocationTab .icon.icon-visited:after {
-  content: '';
-  width: 25%;
-  height: 2px;
-  position: absolute;
-  margin-left: -25%;
-  margin-top: -10px;
-  background-color: #fff;
-  z-index: -9; }
-
-ion-tabs.dt-tabs.tabs-color-active-positive .tab-item.tab-item-active {
-  color: #F5533D !important;
-  z-index: 1; }
-
-ion-tabs.dt-tabs .icon-active {
-  color: #fff;
-  z-index: 1; }
-
-.disable-clickon-tabs .tab-nav.tabs {
-  pointer-events: none !important;
-  display: none; }
-
-@media screen and (min-width: 480px) {
-  ion-tabs.dt-tabs .tab-item.tab-item:after {
-    display: none; } }
-
-.align {
+  font-size: 2em;
+  padding: 3rem;
   margin: 0 auto;
-  width: 200px; }
-  .align .success-message {
-    color: #fff;
-    margin-top: 150px !important;
-    font-family: oswald_regularregular;
-    font-size: 45px;
-    text-align: center;
-    display: inline-block; }
-  .align .ion-checkmark {
-    font-size: 50px !important;
-    color: #fff !important;
-    display: inline-block; }
+  display: block; }
 
-.success {
-  font-size: 20px;
-  color: #fff;
-  font-family: oswaldlight; }
-
-.success-background {
-  background: url("../img/on-top.png"), url("../img/long-rectangle.png");
-  background-repeat: no-repeat;
+.nl-form ul {
+  list-style: none;
   margin: 0;
-  background-size: 100% 100%; }
-
-ion-content.choose-service .row {
   padding: 0; }
 
-ion-content.choose-service .order-type {
-  background-color: rgba(11, 11, 11, 0.5);
-  color: #3f6670;
-  font-family: latoregular;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  text-align: left;
-  padding: 6px 20px;
-  margin: 0 !important; }
+/* normalize the input elements, make them look like everything else */
+.nl-form input,
+.nl-form select,
+.nl-form button {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
 
-ion-content.choose-service.has-tabs-top {
-  padding-top: 20px !important; }
+.nl-form input:focus {
+  outline: none; }
 
-ion-content.choose-service .all-cars {
-  padding-bottom: 50px; }
-  ion-content.choose-service .all-cars .car {
-    justify-content: space-between;
-    background: #094051;
-    margin-bottom: 10px; }
-    ion-content.choose-service .all-cars .car.eco-color {
-      background: #76ad00 !important; }
-    ion-content.choose-service .all-cars .car .car-service {
-      padding-top: 20px !important; }
-      ion-content.choose-service .all-cars .car .car-service .car-class {
-        font-family: oswald_regularregular;
-        font-size: 17px;
-        color: #fff;
-        letter-spacing: 0.91px;
-        text-align: left;
-        margin-bottom: 0;
-        padding-left: 15px !important; }
-      ion-content.choose-service .all-cars .car .car-service .car-name {
-        font-family: oswaldlight;
-        font-size: 14px;
-        color: #fff;
-        letter-spacing: 0.79px;
-        text-align: left;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding-left: 15px !important; }
-      ion-content.choose-service .all-cars .car .car-service .car-img {
-        width: 130px;
-        margin-left: 10px;
-        display: block; }
-      ion-content.choose-service .all-cars .car .car-service .passengers-icon {
-        width: 11px;
-        margin-left: 15px; }
-      ion-content.choose-service .all-cars .car .car-service .baggages-icon {
-        width: 14px;
-        margin-left: 10px; }
-      ion-content.choose-service .all-cars .car .car-service .capacity-info {
-        color: #fff;
-        font-family: latoregular;
-        font-size: 12px;
-        letter-spacing: 0.30px;
-        text-align: right; }
-    ion-content.choose-service .all-cars .car .vertical-line {
-      width: 2px;
-      height: 101px;
-      margin-top: 34px;
-      margin-right: 5px; }
-    ion-content.choose-service .all-cars .car .price {
-      padding-top: 20px !important; }
-      ion-content.choose-service .all-cars .car .price .total-price-info {
-        font-family: latoregular;
-        font-size: 12px;
-        color: #fff;
-        letter-spacing: 0.5px;
-        text-align: left;
-        margin-top: 20px !important;
-        padding-bottom: 10px; }
-      ion-content.choose-service .all-cars .car .price .total-price-value {
-        font-family: oswald_regularregular;
-        font-size: 35px;
-        color: #fff;
-        text-align: left;
-        display: inline-block;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important; }
-      ion-content.choose-service .all-cars .car .price .total-price-value-ro {
-        font-family: oswald_regularregular;
-        font-size: 20px;
-        color: #fff;
-        text-align: left;
-        display: block;
-        margin: 0 !important;
-        margin-bottom: 0 !important; }
-      ion-content.choose-service .all-cars .car .price .icon-euro {
-        width: 18px; }
-    ion-content.choose-service .all-cars .car .info {
-      padding-top: 20px !important; }
-      ion-content.choose-service .all-cars .car .info .info-icon {
-        width: 26px;
-        display: none;
-        margin-left: -10px; }
-      ion-content.choose-service .all-cars .car .info .forward-arrow {
-        width: 14px;
-        margin-top: 45px; }
-    ion-content.choose-service .all-cars .car:last-child {
-      margin-bottom: 10px; }
+/* custom field (drop-down, text element) styling  */
+.nl-field {
+  display: inline-block;
+  position: relative; }
 
-.bar.bar-header {
-  background: #0b2731; }
+.nl-field.nl-field-open {
+  z-index: 10000; }
 
-.centred, header .row, header h5 {
+/* the toggle is the visible part in the form */
+.nl-field-toggle,
+.nl-form input,
+.nl-form select {
+  line-height: inherit;
+  display: inline-block;
+  color: #b14943;
+  cursor: pointer;
+  border-bottom: 1px dashed #b14943;
+  width: 60%; }
+
+/* drop-down list / text element */
+.nl-field ul {
+  position: absolute;
+  visibility: hidden;
+  background: #76C3BD;
+  left: -0.5em;
+  top: 50%;
+  font-size: 80%;
+  opacity: 0;
+  -webkit-transform: translateY(-40%) scale(0.9);
+  -moz-transform: translateY(-40%) scale(0.9);
+  transform: translateY(-40%) scale(0.9);
+  -webkit-transition: visibility 0s 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s; }
+
+.nl-field.nl-field-open ul {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(-50%) scale(1);
+  -moz-transform: translateY(-50%) scale(1);
+  transform: translateY(-50%) scale(1);
+  -webkit-transition: visibility 0s 0s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: visibility 0s 0s, opacity 0.3s, -moz-transform 0.3s;
+  transition: visibility 0s 0s, opacity 0.3s, transform 0.3s; }
+
+.nl-field ul li {
+  color: #fff;
+  position: relative; }
+
+.nl-dd ul li {
+  padding: 0 1.5em 0 0.5em;
+  cursor: pointer;
+  white-space: nowrap; }
+
+.nl-dd ul li.nl-dd-checked {
+  color: #478982; }
+
+.no-touch .nl-dd ul li:hover {
+  background: rgba(0, 0, 0, 0.05); }
+
+.no-touch .nl-dd ul li:hover:active {
+  color: #478982; }
+
+/* icons for some elements */
+.nl-dd ul li.nl-dd-checked:before,
+.nl-submit:before,
+.nl-field-go:before {
+  font-family: 'nlicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased; }
+
+.nl-dd ul li.nl-dd-checked:before {
+  content: "\e000";
+  position: absolute;
+  right: 1em;
+  font-size: 50%;
+  line-height: 3; }
+
+.nl-ti-text ul {
+  min-width: 8em; }
+
+.nl-ti-text ul li.nl-ti-input input {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto; }
+  padding: 0.2em 2em 0.2em 0.5em;
+  border-bottom: none;
+  color: #fff; }
 
-header {
-  position: fixed !important;
+.nl-form .nl-field-go {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  width: 1.8em;
+  text-align: center;
+  color: transparent; }
+
+.nl-field-go:before {
+  content: "\e001";
+  font-size: 75%;
+  color: #fff;
+  width: 100%;
+  line-height: 2.5;
+  display: block; }
+
+/* custom placeholder color */
+input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8); }
+
+input:active::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.2); }
+
+input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8); }
+
+input:active::-moz-placeholder,
+input:focus::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.2); }
+
+input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8); }
+
+input:active::-ms-input-placeholder,
+input:focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.2); }
+
+/* example field below text input */
+.nl-ti-text ul li.nl-ti-example {
+  font-size: 40%;
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.4em 1em;
+  color: rgba(0, 0, 0, 0.2);
+  border-top: 1px dashed rgba(255, 255, 255, 0.7); }
+
+.nl-ti-text ul li.nl-ti-example em {
+  color: #fff; }
+
+/* submit button */
+.nl-submit-wrap {
+  margin-top: 0.4em; }
+
+.nl-form .nl-submit {
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #76C3BD;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 40%;
+  font-weight: 700;
+  letter-spacing: 3px;
+  display: block;
+  margin: 5rem auto; }
+
+.no-touch .nl-form .nl-submit:hover,
+.no-touch .nl-form .nl-submit:active {
+  background: #69B1A9; }
+
+.no-touch .nl-form .nl-submit:hover:before {
+  background: #58a199; }
+
+/* overlay becomes visible when a field is opened */
+.nl-overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0b2731; }
-  header.padding {
-    padding-bottom: 0; }
-  header form .row {
-    padding-bottom: 0 !important; }
-  header form .pick-label {
-    background-color: #040F15 !important;
-    margin: 0 !important;
-    border-radius: 7px;
-    border: 1px solid #003640 !important;
-    transition: all .2s ease-in;
-    padding: 0 10px 0 15px;
-    width: 100% !important;
-    height: 38px; }
-    header form .pick-label .ion-search, header form .pick-label .ion-ios-close {
-      color: #094051;
-      font-size: 19px !important; }
-    header form .pick-label .ion-ios-close {
-      display: inline-block; }
-    header form .pick-label .i-active {
-      color: #F5533D; }
-    header form .pick-label .button-reset {
-      margin: 0;
-      padding: 0;
-      padding-top: 5px;
-      padding-right: 5px;
-      background-color: transparent !important;
-      border: 0; }
-    header form .pick-label .search-input {
-      margin-left: 10px;
-      margin-right: 10px;
-      color: #fff;
-      font-family: latoregular;
-      font-size: 13px; }
-      header form .pick-label .search-input .ellipsis2-on {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap; }
-      header form .pick-label .search-input .ellipsis2-on:hover {
-        overflow: visible; }
-  header form button.form-clear-button {
-    background: none;
-    border: none;
-    outline: none;
-    color: #F5533D;
-    font-family: latoregular;
-    letter-spacing: 0.5px;
-    font-size: 12px;
-    text-transform: uppercase;
-    height: 38px;
-    float: left; }
-  header .row.header-text {
-    padding-top: 0 !important; }
-  header h5 {
-    color: white;
-    margin-left: 2px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: #3f6670; }
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 9999;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.3s, opacity 0.3s;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s;
+  transition: visibility 0s 0.3s, opacity 0.3s; }
 
-ion-content.pick-location {
-  font-family: latoregular;
-  padding-top: 92px; }
-  ion-content.pick-location .location-list {
-    float: left;
-    width: 100%; }
-    ion-content.pick-location .location-list .item {
-      background-color: transparent !important;
-      border-color: #3f6670;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      padding: 20px 0;
-      color: white; }
-      ion-content.pick-location .location-list .item .title {
-        font-size: 16px;
-        white-space: initial; }
-      ion-content.pick-location .location-list .item .subtitle {
-        font-size: 12px;
-        white-space: initial; }
+.nl-field.nl-field-open ~ .nl-overlay {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s; }
 
-ion-content.my-orders .order {
-  background: #094051;
-  border-radius: 11px;
-  padding: 10px;
-  height: 130px;
-  position: relative;
-  max-width: 600px;
-  margin: 20px auto; }
-  ion-content.my-orders .order .ellipsis-on {
-    max-width: 320px !important;
-    width: 100%; }
-  @media screen and (max-width: 320px) {
-    ion-content.my-orders .order .ellipsis-on {
-      max-width: 250px !important;
-      width: 100%; } }
-  ion-content.my-orders .order .order-status {
-    font-family: latoregular;
-    font-size: 12px;
-    color: #fff;
-    letter-spacing: 0.5px;
-    text-align: left;
-    padding-top: 5px; }
-  ion-content.my-orders .order .location-info {
-    padding: 0; }
-    ion-content.my-orders .order .location-info .pickers {
-      float: left;
-      margin-right: 10px; }
-    ion-content.my-orders .order .location-info .right-info {
-      width: 92%;
-      float: left; }
-    ion-content.my-orders .order .location-info .location {
-      font-family: latoregular;
-      font-size: 16px;
-      color: #fff;
-      letter-spacing: 0px;
-      text-align: left; }
-    ion-content.my-orders .order .location-info .pickers {
-      margin-top: 7px; }
-      ion-content.my-orders .order .location-info .pickers .destination, ion-content.my-orders .order .location-info .pickers .origin {
-        position: relative;
-        display: block;
-        z-index: 2;
-        height: 30px;
-        line-height: 0 !important; }
-      ion-content.my-orders .order .location-info .pickers .destination {
-        color: #43a39b !important; }
-      ion-content.my-orders .order .location-info .pickers .origin {
-        color: #F64B34 !important; }
-      ion-content.my-orders .order .location-info .pickers i.icon.ion-record {
-        font-size: 8px; }
-      ion-content.my-orders .order .location-info .pickers i.icon.ion-record.destination:after {
-        content: "";
-        left: 2px;
-        top: 4px;
-        color: #fff;
-        position: absolute;
-        width: 2px;
-        height: 29px;
-        background: #fff;
-        z-index: -1; }
-  ion-content.my-orders .order .order-info {
-    font-family: oswald_regularregular;
-    font-size: 16px;
-    color: #fff;
-    letter-spacing: 0.91px;
-    text-align: left;
-    padding-bottom: 0; }
-    ion-content.my-orders .order .order-info .order-number {
-      font-family: oswaldbold; }
-  ion-content.my-orders .order .forward-arrow {
-    width: 14px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px; }
+@media screen and (max-width: 45em) {
+  .nl-form {
+    font-size: 3em; } }
 
-h2.order-info.ng-binding a {
-  color: #fff !important; }
-
-ion-content.feedback-order .item-input {
-  padding-bottom: 0; }
-  ion-content.feedback-order .item-input textarea::-webkit-input-placeholder {
-    line-height: 32px; }
-  ion-content.feedback-order .item-input textarea:-moz-placeholder {
-    line-height: 32px; }
-  ion-content.feedback-order .item-input textarea::-moz-placeholder {
-    line-height: 32px; }
-  ion-content.feedback-order .item-input textarea:-ms-input-placeholder {
-    line-height: 32px; }
-
-ion-content.feedback-order .map-wrapper {
-  height: -webkit-calc(100% - 370px);
-  height: -moz-calc(100% - 370px);
-  height: calc(100% - 370px); }
-
-ion-content.feedback-order .bottom-wrapper {
-  height: 66vh; }
-
-ion-content.feedback-order .choose-service .all-cars .row {
-  margin-bottom: 2px;
-  padding-top: 0; }
-
-ion-content.feedback-order .choose-service .all-cars .car {
-  justify-content: space-between;
-  background: #094051; }
-  ion-content.feedback-order .choose-service .all-cars .car .car-service {
-    padding-top: 15px !important;
-    max-width: 140px;
-    padding-right: 10px; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .car-class {
-      font-family: oswald_regularregular;
-      font-size: 15px;
-      color: #fff;
-      letter-spacing: 0.91px;
-      text-align: left;
-      margin-bottom: 0;
-      padding-left: 15px !important; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .car-name {
-      font-family: oswaldlight;
-      font-size: 11px;
-      color: #fff;
-      letter-spacing: 0.79px;
-      text-align: left;
-      padding-left: 15px !important;
-      margin-bottom: 0 !important; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .car-img {
-      width: 140px;
-      display: block;
-      margin-top: -10px;
-      margin-left: -20px; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .passengers-icon {
-      width: 11px;
-      margin-left: 15px; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .baggages-icon {
-      width: 14px;
-      margin-left: 5px; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .capacity-info {
-      color: #fff;
-      font-family: latoregular;
-      font-size: 11px;
-      letter-spacing: 0.30px;
-      text-align: right; }
-  ion-content.feedback-order .choose-service .all-cars .car .price {
-    padding-top: 20px !important;
-    margin-right: 20px !important; }
-    ion-content.feedback-order .choose-service .all-cars .car .price .total-price-info {
-      font-family: latoregular;
-      font-size: 14px;
-      color: #fff;
-      text-align: left;
-      margin-top: -2px !important;
-      margin-bottom: 0 !important;
-      margin-right: -20px; }
-    ion-content.feedback-order .choose-service .all-cars .car .price .minimal-info {
-      margin: 0 !important;
-      display: inline-block;
-      text-decoration: line-through; }
-    ion-content.feedback-order .choose-service .all-cars .car .price .icon-euro-minimal {
-      width: 10px !important;
-      display: inline-block; }
-    ion-content.feedback-order .choose-service .all-cars .car .price .total-price-value {
-      font-family: oswald_regularregular;
-      font-size: 35px;
-      color: #fff;
-      text-align: left;
-      display: inline-block;
-      margin: 0; }
-    ion-content.feedback-order .choose-service .all-cars .car .price .icon-euro {
-      width: 15px;
-      display: inline-block !important; }
-  ion-content.feedback-order .choose-service .all-cars .car .info {
-    padding-top: 15px !important; }
-    ion-content.feedback-order .choose-service .all-cars .car .info .info-icon {
-      width: 26px;
-      display: block;
-      margin-right: 20px; }
-
-ion-content.feedback-order label {
-  margin: 2px auto !important;
-  max-width: 100% !important;
-  background-color: #094051 !important; }
-  ion-content.feedback-order label input:disabled {
-    background-color: transparent;
-    color: #fff;
-    opacity: 1; }
-
-ion-content.feedback-order #map {
-  margin: 0;
-  -webkit-filter: blur(0);
-  width: 100%;
-  height: 100%; }
-
-ion-content.feedback-order .date-info-container {
-  background-color: #094051; }
-  ion-content.feedback-order .date-info-container .padding-left {
-    padding-left: 20px !important; }
-  ion-content.feedback-order .date-info-container .border-bottom {
-    border-bottom: 2px solid #08111f !important; }
-  ion-content.feedback-order .date-info-container .info-wrapper {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 0 15px; }
-    ion-content.feedback-order .date-info-container .info-wrapper.flex-container {
-      justify-content: space-between; }
-      ion-content.feedback-order .date-info-container .info-wrapper.flex-container .flex-item {
-        width: 50%; }
-        ion-content.feedback-order .date-info-container .info-wrapper.flex-container .flex-item.flex-container {
-          align-items: center; }
-        ion-content.feedback-order .date-info-container .info-wrapper.flex-container .flex-item:nth-child(2) {
-          padding-left: 10px; }
-    ion-content.feedback-order .date-info-container .info-wrapper .margin-left {
-      margin-left: 110px; }
-    ion-content.feedback-order .date-info-container .info-wrapper .info-box {
-      padding: 5px 0; }
-      ion-content.feedback-order .date-info-container .info-wrapper .info-box:first-child {
-        padding-right: 7px; }
-      ion-content.feedback-order .date-info-container .info-wrapper .info-box h5 {
-        font-family: latoregular;
-        font-size: 13px;
-        margin-top: 12px;
-        margin-bottom: 12px;
-        color: #fff;
-        letter-spacing: 0.5px; }
-      ion-content.feedback-order .date-info-container .info-wrapper .info-box h4 {
-        font-family: oswald_regularregular;
-        font-size: 13px;
-        color: #fff;
-        letter-spacing: 0.5px;
-        margin-top: 12px;
-        margin-bottom: 10px; }
-
-ion-content.feedback-order .order-info-container {
-  position: relative; }
-  ion-content.feedback-order .order-info-container .order-info-wrapper {
-    width: 100%;
-    max-width: 500px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative; }
-  ion-content.feedback-order .order-info-container .ellipsis-on {
-    max-width: 600px !important;
-    width: 100%; }
-  @media screen and (max-width: 320px) {
-    ion-content.feedback-order .order-info-container .ellipsis-on {
-      max-width: 250px !important;
-      width: 100%; } }
-  ion-content.feedback-order .order-info-container .location-info {
-    padding: 0; }
-    ion-content.feedback-order .order-info-container .location-info input {
-      font-size: 16px; }
-    ion-content.feedback-order .order-info-container .location-info .origin {
-      font-size: 11px;
-      color: #43a39b;
-      margin: 0 10px 0 -5px; }
-    ion-content.feedback-order .order-info-container .location-info .destination {
-      font-size: 11px;
-      color: #F64B34;
-      margin: 0 10px 0 -5px; }
-    ion-content.feedback-order .order-info-container .location-info .pickers {
-      float: left;
-      margin-right: 10px; }
-    ion-content.feedback-order .order-info-container .location-info .right-info {
-      width: 92%;
-      float: right; }
-    ion-content.feedback-order .order-info-container .location-info .location {
-      font-family: latoregular;
-      font-size: 16px;
-      color: #fff;
-      letter-spacing: 0px;
-      text-align: left; }
-    ion-content.feedback-order .order-info-container .location-info .pickers .destination, ion-content.feedback-order .order-info-container .location-info .pickers .origin {
-      position: relative;
-      display: block;
-      z-index: 1;
-      height: 30px; }
-    ion-content.feedback-order .order-info-container .location-info .pickers .destination {
-      color: #43a39b !important; }
-    ion-content.feedback-order .order-info-container .location-info .pickers .origin {
-      color: #F64B34 !important; }
-    ion-content.feedback-order .order-info-container .location-info .pickers i.icon.ion-record {
-      font-size: 8px; }
-    ion-content.feedback-order .order-info-container .location-info .pickers i.icon.ion-record.destination:after {
-      content: "";
-      left: 2px;
-      top: 8px;
-      color: #fff;
-      position: absolute;
-      width: 2px;
-      height: 29px;
-      background: #fff;
-      z-index: -1; }
-  ion-content.feedback-order .order-info-container .row.car-info {
-    margin-top: 25px;
-    padding: 0; }
-    ion-content.feedback-order .order-info-container .row.car-info .col {
-      padding: 0; }
-    ion-content.feedback-order .order-info-container .row.car-info .car-service {
-      font-family: oswald_regularregular;
-      font-size: 17px;
-      color: #fff;
-      letter-spacing: 0.91px;
-      text-align: left;
-      margin-bottom: 0; }
-    ion-content.feedback-order .order-info-container .row.car-info .car-name {
-      font-family: oswaldlight;
-      font-size: 14px;
-      color: #fff;
-      letter-spacing: 0.79px;
-      text-align: left;
-      margin-top: 5px;
-      margin-bottom: 5px; }
-    ion-content.feedback-order .order-info-container .row.car-info .car-img {
-      width: 110px;
-      margin-left: -20px;
-      display: block; }
-    ion-content.feedback-order .order-info-container .row.car-info .col-10 {
-      margin: 0;
-      padding: 0; }
-    ion-content.feedback-order .order-info-container .row.car-info .info-icon {
-      width: 26px;
-      margin-top: 10px;
-      display: none;
-      float: right;
-      padding: 0; }
-
-@media screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  ion-content.feedback-order .info-wrapper {
-    padding: 0 15px !important; }
-  ion-content.feedback-order .choose-service .all-cars .car .img {
-    margin-left: -35px; }
-  ion-content.feedback-order .choose-service .all-cars .car .car-service {
-    padding-top: 15px !important;
-    max-width: 140px;
-    padding-right: 10px; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .car-class {
-      font-size: 11px; }
-    ion-content.feedback-order .choose-service .all-cars .car .car-service .car-img {
-      max-width: 110px !important;
-      width: 100%;
-      display: block;
-      margin-top: -10px;
-      margin-left: -20px; }
-  ion-content.feedback-order .choose-service .all-cars .car .price {
-    margin-top: -10px;
-    margin-right: 30px !important; }
-    ion-content.feedback-order .choose-service .all-cars .car .price.custom-price {
-      margin-left: -20px; }
-    ion-content.feedback-order .choose-service .all-cars .car .price .total-price-info {
-      font-family: latoregular;
-      font-size: 12px !important;
-      color: #fff;
-      text-align: left;
-      margin-top: -2px !important;
-      margin-bottom: 0 !important; }
-  .date-info-container .info-wrapper .info-box h4 {
-    font-size: 12px; }
-  .date-info-container .info-wrapper .col h4 {
-    font-family: oswald_regularregular;
-    font-size: 16px;
-    text-align: right;
-    color: #fff;
-    letter-spacing: 1px;
-    width: 100%; } }
-
-ion-content.directTransfer .item-input {
-  padding-bottom: 0; }
-  ion-content.directTransfer .item-input textarea::-webkit-input-placeholder {
-    line-height: 32px; }
-  ion-content.directTransfer .item-input textarea:-moz-placeholder {
-    line-height: 32px; }
-  ion-content.directTransfer .item-input textarea::-moz-placeholder {
-    line-height: 32px; }
-  ion-content.directTransfer .item-input textarea:-ms-input-placeholder {
-    line-height: 32px; }
-
-@media screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  ion-content.directTransfer label.item.item-input.text-label .pick-date.padding-action {
-    text-align: right; } }
-
-ion-content.directTransfer .map-wrapperDT #map {
-  height: 40vh !important; }
-
-@media screen and (device-height: 568px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  ion-content.directTransfer .map-wrapperDT #map {
-    height: 27vh !important; } }
-
-ion-content.directTransfer .directTransfer-container.overview {
-  background: #002837; }
-  ion-content.directTransfer .directTransfer-container.overview .price .voucher-price .total-price-info {
-    font-size: 9px; }
-
-ion-content.directTransfer .eco-button {
-  margin: 0; }
-
-ion-content.directTransfer label {
-  margin: 2px auto !important; }
-  ion-content.directTransfer label input:disabled, ion-content.directTransfer label textarea:disabled {
-    background-color: transparent;
-    color: #fff;
-    opacity: 1; }
-
-ion-content.directTransfer .background-wrapper {
-  background: url("../img/home-screen.jpg"), url("../img/on-top.png");
-  background-blend-mode: multiply !important;
-  background-repeat: no-repeat;
-  background-size: 100% 50%;
-  width: 100%;
-  height: 100%; }
-
-ion-content.directTransfer .choose-service .all-cars .row {
-  margin-bottom: 2px; }
-
-ion-content.directTransfer .choose-service .all-cars .car {
-  justify-content: space-between;
-  background: #094051; }
-  ion-content.directTransfer .choose-service .all-cars .car .car-service {
-    padding-top: 17px !important; }
-    @media screen and (min-device-width: 320px) and (max-device-width: 568px) {
-      ion-content.directTransfer .choose-service .all-cars .car .car-service .car-img {
-        max-width: 110px !important;
-        width: 100%;
-        display: block;
-        margin-top: -10px;
-        margin-left: -20px; } }
-    ion-content.directTransfer .choose-service .all-cars .car .car-service .car-class {
-      font-family: oswald_regularregular;
-      font-size: 17px;
-      color: #fff;
-      letter-spacing: 0.91px;
-      text-align: left;
-      margin-bottom: 0;
-      padding-left: 15px !important; }
-    ion-content.directTransfer .choose-service .all-cars .car .car-service .car-name {
-      font-family: oswaldlight;
-      font-size: 14px;
-      color: #fff;
-      letter-spacing: 0.79px;
-      text-align: left;
-      padding-left: 15px !important; }
-    ion-content.directTransfer .choose-service .all-cars .car .car-service .car-img {
-      width: 130px;
-      display: block;
-      margin-top: -5px;
-      margin-left: -5px; }
-    ion-content.directTransfer .choose-service .all-cars .car .car-service .passengers-icon {
-      width: 11px;
-      margin-left: 15px; }
-    ion-content.directTransfer .choose-service .all-cars .car .car-service .baggages-icon {
-      width: 13px;
-      margin-left: 10px; }
-      @media screen and (min-device-width: 320px) and (max-device-width: 568px) {
-        ion-content.directTransfer .choose-service .all-cars .car .car-service .baggages-icon {
-          margin-left: 2px; } }
-    ion-content.directTransfer .choose-service .all-cars .car .car-service .capacity-info {
-      color: #fff;
-      font-family: latoregular;
-      font-size: 10px;
-      text-align: right; }
-  ion-content.directTransfer .choose-service .all-cars .car .price {
-    padding-top: 10px !important;
-    padding-left: 10px; }
-    @media screen and (min-device-width: 320px) and (max-device-width: 568px) {
-      ion-content.directTransfer .choose-service .all-cars .car .price {
-        position: relative;
-        left: -10px; } }
-    ion-content.directTransfer .choose-service .all-cars .car .price .total-price-info {
-      font-family: latoregular;
-      font-size: 12px;
-      color: #fff;
-      text-align: left;
-      margin-top: -2px !important;
-      margin-bottom: 10 !important;
-      margin-left: 7px; }
-    ion-content.directTransfer .choose-service .all-cars .car .price .minimal-info {
-      margin: 0 !important;
-      display: inline-block;
-      text-decoration: line-through; }
-      @media screen and (min-device-width: 320px) and (max-device-width: 568px) {
-        ion-content.directTransfer .choose-service .all-cars .car .price .minimal-info {
-          font-size: 10px;
-          margin-top: -15px; } }
-    ion-content.directTransfer .choose-service .all-cars .car .price .icon-euro-minimal {
-      width: 7px !important;
-      display: inline-block; }
-    ion-content.directTransfer .choose-service .all-cars .car .price .total-price-value {
-      font-family: oswald_regularregular;
-      font-size: 25px;
-      color: #fff;
-      text-align: left;
-      display: inline-block;
-      margin: 0;
-      padding-left: 10%; }
-    ion-content.directTransfer .choose-service .all-cars .car .price .total-price-value-ro {
-      font-family: oswald_regularregular;
-      font-size: 14px;
-      color: #fff;
-      text-align: left;
-      display: block;
-      margin: 0 !important;
-      padding-left: 10%; }
-    ion-content.directTransfer .choose-service .all-cars .car .price .icon-euro {
-      width: 15px;
-      display: inline-block !important; }
-  ion-content.directTransfer .choose-service .all-cars .car .info {
-    padding-top: 15px !important; }
-    ion-content.directTransfer .choose-service .all-cars .car .info .info-icon {
-      width: 26px;
-      display: none;
-      margin-right: 20px; }
-
-ion-content.more {
-  font-family: latoregular;
-  position: absolute; }
-  ion-content.more .more-list {
-    width: 100%; }
-    ion-content.more .more-list .item {
-      background-color: transparent !important;
-      border-color: #3f6670;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      padding: 0 !important;
-      color: white; }
-      ion-content.more .more-list .item h4.title {
-        font-size: 16px;
-        letter-spacing: 0.6px;
-        font-family: latolight;
-        white-space: initial;
-        margin-left: 5px;
-        color: white;
-        padding: 20px; }
-      ion-content.more .more-list .item .subtitle {
-        font-size: 12px;
-        white-space: initial; }
-
-ion-content.pick-voucher {
-  padding: 10px; }
-  ion-content.pick-voucher form {
-    margin-top: 20px; }
-    ion-content.pick-voucher form .help-block {
-      margin-bottom: 10px;
-      color: #971315;
-      font-size: 14px;
-      font-weight: 600;
-      text-align: left;
-      margin-left: 2px; }
-    ion-content.pick-voucher form .pick-label {
-      background-color: #040F15 !important;
-      margin: 0 !important;
-      border-radius: 7px;
-      border: 1px solid #003640 !important;
-      transition: all .2s ease-in;
-      padding: 0 10px 0 15px;
-      width: 100% !important;
-      height: 38px; }
-      ion-content.pick-voucher form .pick-label .ion-search, ion-content.pick-voucher form .pick-label .ion-ios-close {
-        color: #094051;
-        font-size: 19px !important; }
-      ion-content.pick-voucher form .pick-label .hidden {
-        visibility: hidden; }
-      ion-content.pick-voucher form .pick-label .ion-ios-close {
-        display: inline-block; }
-      ion-content.pick-voucher form .pick-label .i-active {
-        color: #F5533D; }
-      ion-content.pick-voucher form .pick-label .button-reset {
-        margin: 0;
-        padding: 0;
-        padding-top: 5px;
-        padding-right: 5px;
-        background-color: transparent !important;
-        border: 0; }
-      ion-content.pick-voucher form .pick-label .search-input {
-        margin-left: 10px;
-        margin-right: 10px;
-        color: #fff;
-        font-family: latoregular;
-        font-size: 13px; }
-        ion-content.pick-voucher form .pick-label .search-input .ellipsis2-on {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap; }
-        ion-content.pick-voucher form .pick-label .search-input .ellipsis2-on:hover {
-          overflow: visible; }
-    ion-content.pick-voucher form .button-wrapper {
-      margin-top: 10px; }
-      ion-content.pick-voucher form .button-wrapper button {
-        max-width: none;
-        width: 100%;
-        height: 30px;
-        background: #F5533D;
-        color: white;
-        font-size: 16px;
-        border-radius: 2px; }
-    ion-content.pick-voucher form button.form-clear-button {
-      background: none;
-      border: none;
-      outline: none;
-      color: #F5533D;
-      font-family: latoregular;
-      letter-spacing: 0.5px;
-      font-size: 12px;
-      text-transform: uppercase;
-      height: 38px;
-      float: left; }
-
-.tab-events {
-  padding-top: 35px; }
-  .tab-events .terms-wrapper {
-    padding: 0 !important; }
-    .tab-events .terms-wrapper .card {
-      background: none !important; }
-    .tab-events .terms-wrapper .item-text-wrap {
-      background: #094051;
-      border-radius: 8px !important; }
-      .tab-events .terms-wrapper .item-text-wrap div.events-wrapper {
-        font-size: 16px;
-        color: #ffffff;
-        width: 100%; }
-        .tab-events .terms-wrapper .item-text-wrap div.events-wrapper .clearfix {
-          clear: both; }
-        .tab-events .terms-wrapper .item-text-wrap div.events-wrapper h2 {
-          font-family: oswald_regularregular;
-          font-size: 14px;
-          color: #ffffff;
-          text-transform: uppercase; }
-          .tab-events .terms-wrapper .item-text-wrap div.events-wrapper h2 .padding-top {
-            padding-top: 20px; }
-        .tab-events .terms-wrapper .item-text-wrap div.events-wrapper h3 {
-          color: #ffffff;
-          font-size: 11px;
-          font-family: latoregular; }
-          .tab-events .terms-wrapper .item-text-wrap div.events-wrapper h3 .color {
-            color: #19f597; }
-        .tab-events .terms-wrapper .item-text-wrap div.events-wrapper .events-section {
-          width: 75%;
-          float: left;
-          border-right: 1px solid white;
-          padding-right: 15px; }
-        .tab-events .terms-wrapper .item-text-wrap div.events-wrapper .price-section {
-          width: 15%;
-          float: left;
-          margin-left: 7%;
-          margin-top: 15px;
-          display: inline; }
-          .tab-events .terms-wrapper .item-text-wrap div.events-wrapper .price-section h2 {
-            font-size: 16px; }
-            .tab-events .terms-wrapper .item-text-wrap div.events-wrapper .price-section h2.price-number {
-              display: inline-block;
-              margin-top: 5px; }
-          .tab-events .terms-wrapper .item-text-wrap div.events-wrapper .price-section .icon-euro {
-            width: 15px;
-            display: inline-block;
-            margin-left: 5px;
-            position: relative;
-            top: 1.5px; }
+@media screen and (max-width: 25em) {
+  .nl-form {
+    font-size: 2em; } }
