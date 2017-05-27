@@ -5,7 +5,7 @@ angular.module('whos_your_doc.controllers')
   if (StorageService.getSession('firstUse') == false) {
     StorageService.addSession('firstUse', true);
   } else {
-    $state.go('landingpage');
+    $state.go('main');
   }
   // Called each time the slide changes
   $scope.slideChanged = function(index) {
