@@ -1,15 +1,15 @@
 import { Request, Response } from './Route';
-import * as shuffle from 'shuffle-array';
+// import * as shuffle from 'shuffle-array';
 import { Injectable } from 'injection-js';
 import * as faker from 'faker/locale/en';
-import { AverageableDocument, Doctor } from '../models/doctor.model';
+import { AverageableDocument, Doctor, GeolocationDocument } from '../models/doctor.model';
 
-function getRandomNum(min: number = 0, max: number = 1): number {
+/*function getRandomNum(min: number = 0, max: number = 1): number {
 	return Math.floor(min + Math.random() * (max - min));
 }
 function getRandomFromArray(array: any[], min: number = 0, max: number = 1): number[] {
 	return shuffle(array).slice(0, getRandomNum(min, max));
-}
+}*/
 
 function getRandomAverageable(): AverageableDocument {
 	const numEntries = Math.floor(Math.random() * 100);
@@ -19,6 +19,7 @@ function getRandomAverageable(): AverageableDocument {
 	}
 }
 
+/*
 const specialties = [
 	'Allergology', 'Andrology', 'Anesthesia', 'Angiology', 'Aviation medicine', 'Biomedicine',
 	'Cardiology', 'Dentistry', 'Dentistry branches', 'Dermatology', 'Disaster medicine',
@@ -33,30 +34,56 @@ const specialties = [
 	'Space medicine', 'Sports medicine', 'Sports physicians', 'Surgery', 'Surgical specialties',
 	'Toxicology', 'Transplantation medicine', 'Trichology', 'Tropical medicine', 'Urology',
 	'Wilderness medicine'
+];*/
+
+interface IDoctor {
+	name: string;
+	gender: string;
+	avatar?: string;
+	specialties?: string[];
+	profession?: string;
+	address?: string;
+	practiceName?: string;
+	geo?: GeolocationDocument;
+}
+
+const DOCTORS: IDoctor[] = [
+	{
+		name: '',
+		gender: '',
+		avatar: '',
+		specialties: [''],
+		profession: '',
+		address: '',
+		practiceName: '',
+		geo: {
+			lat: 0,
+			lng: 0
+		}
+	}
 ];
 
-async function createDoctor() {
-	const gender = Math.random() < 0.5 ? 0 : 1;
-	const name = `${faker.name.firstName(gender)} ${faker.name.lastName(gender)}`;
-	const specialtiesArray = getRandomFromArray(specialties, 1, 3);
+async function createDoctor(doc: IDoctor) {
 	await Doctor.create({
-		name,
-		gender: ['male', 'female'][gender],
-		avatar: faker.image.avatar(),
+		name: doc.name,
+		gender: doc.gender,
+		avatar: doc.avatar,
 		price: getRandomAverageable(),
 		friendliness: getRandomAverageable(),
 		punctuality: getRandomAverageable(),
 		knowledge: getRandomAverageable(),
-		specialties: specialtiesArray,
-		profession: specialtiesArray[0],
+		specialties: doc.specialties,
+		profession: doc.profession,
 		bio: faker.lorem.paragraph(),
-		address: faker.address.streetAddress(),
-		practiceName: `${name} Clinic`
+		address: doc.address,
+		practiceName: doc.practiceName,
+		geo: doc.geo
 	});
 }
 
 async function createDoctors() {
-	await Promise.all(Array(10000).fill(0).map(createDoctor));
+//	await Promise.all(Array(10000).fill(0).map(createDoctor));
+	await Promise.all(DOCTORS.map(doc => createDoctor(doc)));
 }
 
 @Injectable()
